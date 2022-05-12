@@ -1,15 +1,20 @@
 # Introduction to Neural Networks with OpenCV
 This chapter introduces a family of machine learning models called **artificial neural networks (ANNs)**, or sometimes just **neural networks**. A key characteristic of these models is that they attempt to learn relationships among variables in a multi-layered fashion; they learn multiple functions to predict intermediate results before combining these into a single function to predict something meaningful (such as the class of an object). Recent versions of particular, ANNs with many layers, called **deep neural networks (DNNs)**. We will experiment with both shallower ANNs and DNNs in this chapter.
+
 We have already gained some exposure to machine learning in other chapters - especially in *Chapter 7*, *Building Custom Object Detectors*, wherewe developed a car/non-car classifier using SURF descriptors, a BoW, and an SVM. With this basis for comparison, you might be wondering, what is so special about ANNs? Why are we devoting this book's final chapterto them?
+
 ANNs aim to provide superior accuracy in the following circumstances:
 - There are many input variables, which may have complex, nonlinear relationships to each other.
 - There are many output variables, which may have complex, nonlinear relationships to the input variables. (Typically, the output variables in a classification problem are the confidence scores for the classes, so if there are many classes, there are many output variables.)
 - There are many hidden (unspecified) variables that may have complex, nonlinear relationships to the input and output variables. DNNs even aim to model *multiple* layers of hidden variables, which are interrelated primarily to each other rather than being related primarily to input or output variables.
+
 These circumstances exist in many - perhaps most - real-world problems. Thus, the promised advantages of ANNs and DNNs are enticing. On the other hand, ANNs and especially DNNs are notoriously opaque models, insofar as they work by predicting the existence of an arbitrary number of nameless, hidden variables that may relate to everything else.
+
 Over the course of this chapter, we will cover the following topics:
 - Understanding ANNs as a statistical model and as a toll for supervised machine learning.
 - Understanding ANN topology or, in other words, the organization of an ANN into layers of interconnected neurons. Particularly, we will consider the topology that enables an ANN to act as a type of classifier known as a **multi-layer perceptron (MLP)**.
 - Training and using ANNs as classifiers in OpenCV.
 - Building an application that detects and recognizes handwritten digits (0 to 9). For this, we will train an ANN based on a widely used dataset called MNIST, which contains samples of handwritten digits.
 - Loading and using-pretrained DNNs in OpenCV. We will cover examples of object classification, face detection, and gender classification with DNNs.
+
 By the end of this chapter, you will be in a good position to train and use ANNs in OpenCV, to use pre-trained DNNs from a variety of sources, and to start exploring other libraries that allow you to train your own DNNs.
